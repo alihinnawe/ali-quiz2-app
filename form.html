@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="jspage" href="./js/form.js" />
+  </head>
+
+  <body class="formBody" data-js="formBody">
+    <header>
+      <h1>Quiz App</h1>
+    </header>
+
+    <div class="Wrapper" id="wrapper">
+      <form class="input-groupForm" class="form" data-js="form">
+        <h1 style="text-align: center">Question Form</h1>
+
+        <div class="input-group">
+          <textarea
+            class="textArea1"
+            id="textArea1Id"
+            cols="4"
+            rows="4"
+            maxlength="150"
+            data-js="testTextAreaOne"
+            required
+          ></textarea>
+          <label for="textArea1Id" class="txtAreaLabel">Your Question:</label>
+
+          <span class="line"></span>
+        </div>
+
+        <summary
+          id="summary1"
+          style="color: hotpink; font-weight: 700; text-align: right"
+        ></summary>
+        <span class="line"></span>
+
+        <div class="input-group">
+          <textarea
+            class="textArea2"
+            id="textArea2Id"
+            cols="4"
+            rows="4"
+            maxlength="150"
+            data-js="testTextAreaTwo"
+            required
+          ></textarea>
+          <label for="textArea2Id" class="txtAreaLabel">Your Answer:</label>
+
+          <span class="line"></span>
+        </div>
+
+        <summary
+          id="summary2"
+          style="color: hotpink; font-weight: 700; text-align: right"
+        ></summary>
+        <span class="line"></span>
+
+        <div class="input-group">
+          <input type="text" id="tag2" required />
+          <label for="tag2">Tag</label>
+          <span class="line"></span>
+        </div>
+        <br />
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <footer class="footer">
+      <a href="index.html" class="footer__link">
+        <img class="footer__icon" src="./assets/home.png" alt="home" />
+      </a>
+      <a href="bookmark.html" class="footer__link">
+        <img
+          class="footer__icon"
+          src="./assets/bookmark_filled.png"
+          alt="bookmark filled"
+        />
+      </a>
+
+      <a href="form.html" class="footer__link footer__link--active">
+        <img
+          class="footer__icon footer__icon--filled"
+          src="./assets/plus.png"
+          alt="form"
+        />
+      </a>
+      <a href="profile.html" class="footer__link">
+        <img class="footer__icon" src="./assets/profile.png" alt="profile" />
+      </a>
+    </footer>
+    <script src="./js/form.js"></script>
+  </body>
+</html>

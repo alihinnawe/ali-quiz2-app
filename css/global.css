@@ -1,0 +1,250 @@
+:root {
+  --accent-color: lightblue;
+  --active-color: rgba(0, 155, 255, 1);
+  --fs-500: 1.1rem;
+  --fs-600: 1.5rem;
+  --fs-900: 1.75rem;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: var(--fs-600);
+  /* text-align: center; */
+}
+
+header,
+footer {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+header {
+  top: 0;
+  padding: 20px;
+  background-color: var(--accent-color);
+  border-bottom: 2px solid black;
+  box-shadow: 0px -10px 13px 10px black;
+}
+
+main {
+  padding: 95px 20px 80px 20px;
+}
+
+section {
+  position: relative;
+  background-color: lightgray;
+  padding: 10px;
+  border: 1px solid black;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer {
+  bottom: 0;
+  display: flex;
+  background-color: var(--accent-color);
+  justify-content: space-between;
+  border-top: 2px solid black;
+  box-shadow: 0px 10px 13px 10px black;
+}
+
+.footer__icon {
+  height: 90px;
+  padding: 20px;
+  object-fit: scale-down;
+}
+
+.footer__link {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__link.footer__link--active {
+  background-color: var(--active-color);
+}
+
+form h2 {
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1.6px;
+}
+
+.input-group {
+  display: flex;
+  position: relative;
+  width: 700px;
+  margin-top: 30px;
+}
+
+/*input text color*/
+.input-group input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  color: #fff;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  letter-spacing: 0.8px;
+  z-index: 9;
+}
+/*text area text color*/
+.input-group textarea {
+  position: relative;
+  width: 100%;
+  color: #fff;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  letter-spacing: 0.8px;
+  z-index: 9;
+}
+/*color of the labels*/
+.input-group label {
+  position: absolute;
+  left: 0;
+  padding: 20px 0px 10px;
+  color: #f59dd2;
+  font-size: 16px;
+  pointer-events: none;
+  letter-spacing: 0.8px;
+  transition: 0.5s;
+}
+
+.input-group .txtAreaLabel {
+  position: absolute;
+  left: 0;
+  padding: 50px 0px 0px;
+  color: #f59dd2;
+  font-size: 16px;
+  pointer-events: none;
+  letter-spacing: 0.8px;
+  transition: 0.5s;
+}
+/* label  color*/
+.input-group input:valid ~ label,
+.input-group input:focus ~ label {
+  color: #ffffff;
+  font-size: 12px;
+  transform: translateX(0) translateY(-34px);
+}
+
+/* textarea color how much we enlarge the background color of the text area*/
+.input-group textarea:valid ~ .txtAreaLabel,
+.input-group textarea:focus ~ .txtAreaLabel {
+  color: linear-gradient(to top, #152c4dcc, #e11010);
+  height: 100%;
+  font-size: 12px;
+  transform: translateX(0) translateY(-90%);
+}
+
+.input-group .icon {
+  position: absolute;
+  top: 60%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #fff;
+  z-index: 9;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* backround color for all texts including textarea and input*/
+.input-group .line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to top, #152c4dcc, #db2777);
+  border-radius: 5px;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+/* how much do we need to extend and enlarge the frame of the input */
+.input-group input:valid ~ .line,
+.input-group input:focus ~ .line {
+  height: 44px;
+}
+
+/* how much do we need to extend and enlarge the frame of the textarea */
+.input-group textarea:valid ~ .line,
+.input-group textarea:focus ~ .line {
+  height: 100%;
+}
+
+/*button for all page*/
+button {
+  margin-bottom: 20px;
+  /* width: 100%; */
+  height: 44px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #db2777;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  justify-content: center;
+  align-content: right;
+}
+
+/*button for only form page*/
+form button {
+  width: 100%;
+  height: 44px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #db2777;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  justify-content: center;
+  align-content: right;
+}
+
+form button:active {
+  opacity: 0.8;
+}
+
+/* #d-c {
+  display: block;
+} */
+
+.formBody {
+  position: relative;
+  margin-top: 180px;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: top;
+  justify-content: center;
+  background: linear-gradient(to bottom, #152c4dcc, #db2777);
+}
