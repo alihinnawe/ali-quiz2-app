@@ -9,3 +9,5 @@ function change() {
 }
 
 dark.addEventListener("change", change);
+
+dark.addEventListener();
